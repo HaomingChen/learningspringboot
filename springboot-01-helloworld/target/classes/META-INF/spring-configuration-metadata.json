@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {
+      "name": "person",
+      "type": "com.itguigu.controller.HelloController",
+      "sourceType": "com.itguigu.controller.HelloController"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
