@@ -1,6 +1,5 @@
 package com.itguigu.controller;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 //这个类的所有方法返回的数据直接写给浏览器(如果是对象直接转为json格式
 @RestController
 @Component
-@ConfigurationProperties(prefix = "person")
 public class HelloController {
 
 
