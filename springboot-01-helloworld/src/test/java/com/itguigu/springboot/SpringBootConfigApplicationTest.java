@@ -1,10 +1,13 @@
 package com.itguigu.springboot;
 
 import com.itguigu.bean.Person;
+import com.itguigu.service.HelloService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
@@ -20,8 +23,17 @@ public class SpringBootConfigApplicationTest {
     @Autowired
     Person person;
 
+    @Autowired
+    ApplicationContext ioc;
+
     @Test
-    public void contextLoads(){
+    public void testHelloService() {
+        Boolean ifHasHelloService = ioc.containsBean("helloServiceYes");
+        System.out.println(ifHasHelloService);
+    }
+
+    @Test
+    public void contextLoads() {
         System.out.println(person);
     }
 }

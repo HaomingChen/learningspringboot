@@ -16,6 +16,7 @@ public class HelloController {
 
 
     String lastWonder;
+
     //ConfigurationProperties实际上是根据set方法的方法名来设定该类的value, 只要LastName匹配配置文件中的lastName,
     //就可以进行属性的注入
     public String getLastTrash() {

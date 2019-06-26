@@ -6,12 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springboot01helloworld" />
+        <module name="spring-boot-02-config" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo" target="1.8" />
+      <module name="spring-boot-02-config (1)" target="1.8" />
+      <module name="springboot-02-config" target="1.8" />
+      <module name="springboot01helloworld" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo" options="-parameters" />
+      <module name="spring-boot-02-config" options="-parameters" />
+      <module name="spring-boot-02-config (1)" options="-parameters" />
+      <module name="springboot-02-config" options="-parameters" />
       <module name="springboot01helloworld" options="-parameters" />
     </option>
   </component>

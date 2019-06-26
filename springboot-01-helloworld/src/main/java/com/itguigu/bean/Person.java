@@ -20,7 +20,7 @@ import java.util.Map;
  */
 @Component
 @ConfigurationProperties(prefix = "person")
-@PropertySource("classpath:person.properties")
+//@PropertySource(value = {"classpath:person.properties"})
 public class Person {
     /**
      * <bean class = "Person">

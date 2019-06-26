@@ -1,6 +1,23 @@
 server:
   port: 8081
   path: /hello
+#spring:
+#  profiles:
+#    active: prod
+
+---
+
+server:
+  port: 8084
+spring:
+  profiles: dev
+
+---
+
+server:
+  port: 8085
+spring:
+  profiles: prod
 
 #person:
 #  last-name: lisi
