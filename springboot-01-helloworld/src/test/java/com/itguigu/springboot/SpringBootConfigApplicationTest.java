@@ -29,7 +29,9 @@ public class SpringBootConfigApplicationTest {
     @Test
     public void testHelloService() {
         Boolean ifHasHelloService = ioc.containsBean("helloServiceYes");
-        System.out.println(ifHasHelloService);
+        Boolean ifHasHiService = ioc.containsBean("hiServiceNo");
+        System.out.println("ifHasHelloService " + ifHasHelloService);
+        System.out.println("ifHasHiService " + ifHasHiService);
     }
 
     @Test

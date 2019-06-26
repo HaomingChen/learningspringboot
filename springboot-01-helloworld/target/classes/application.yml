@@ -4,6 +4,19 @@ server:
 #spring:
 #  profiles:
 #    active: prod
+person:
+  last-name: lisi
+  age: 12
+  Integer: 18
+  boss: false
+  birth: 2017/12/12
+  maps: {k1 : v1, k2: 12}
+  lists:
+    - lisi
+    - zhangsan
+  dog:
+    name: xiaogou
+    age: 2
 
 ---
 
@@ -19,19 +32,6 @@ server:
 spring:
   profiles: prod
 
-#person:
-#  last-name: lisi
-#  age: 12
-#  Integer: 18
-#  boss: false
-#  birth: 2017/12/12
-#  maps: {k1 : v1, k2: 12}
-#  lists:
-#    - lisi
-#    - zhangsan
-#  dog:
-#    name: xiaogou
-#    age: 2
 
 #double quotes -> include escape characters
 #single quotes -> won't include escape characters

@@ -1,6 +1,7 @@
 package com.itguigu.config;
 
 import com.itguigu.service.HelloService;
+import com.itguigu.service.HiService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -19,5 +20,10 @@ public class MyAppConfig {
     @Bean
     public HelloService helloServiceYes() {
         return new HelloService();
+    }
+
+    @Bean
+    public HiService hiServiceNo(){
+        return new HiService();
     }
 }
