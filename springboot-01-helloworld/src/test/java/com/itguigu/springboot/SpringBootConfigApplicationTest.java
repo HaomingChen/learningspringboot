@@ -10,6 +10,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.math.BigInteger;
+
 /**
  * SpringBoot 单元测试
  * 可以在测试期间很方便的类似编码一样进行自动注入等容器的功能
@@ -37,5 +39,10 @@ public class SpringBootConfigApplicationTest {
     @Test
     public void contextLoads() {
         System.out.println(person);
+    }
+
+    @Test
+    public void textToBinary(){
+        System.out.println(new BigInteger(1, "Kathryn".getBytes()).toString(2));
     }
 }

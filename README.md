@@ -9,3 +9,5 @@ This is my personal project to study springboot
 3.logback.xml自定义logback配置文件必须直接存放在resource文件夹下才会被读取
 
 4.现在logback.xml不需要加上后缀变为logback-spring.xml就可以使用spring的标记语言属性例如<springProfile name="dev">标记
+
+5.在子项目中配置的springboot icon -> favicon.ico无法显示 原因未知
