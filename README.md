@@ -12,7 +12,7 @@ This is my personal project to study springboot
 
 5.在子项目中配置的springboot icon -> favicon.ico无法显示 原因未知
 
-6.trl + Shift + Alt + N = 搜索java方法
+6.ctrl + Shift + Alt + N = 搜索java方法
 
 7.SpringMvc相关配置 -> spring-boot-autoconfigure -> WebMvcAutoConfiguration.java
 
@@ -23,9 +23,9 @@ This is my personal project to study springboot
 2) 如果需要返回到指定页面，则需要用 @Controller配合视图解析器InternalResourceViewResolver才行。
     如果需要返回JSON，XML或自定义mediaType内容到页面，则需要在对应的方法上加上@ResponseBody注解
 
+9.SpringMVC: converter: 前端类型 -> java类型 如:前端文本:18 -> 后端Integer:18
 
-
-
-
+10.HttpMessageConverter: 将Http的请求和响应(文本)解析成Json
+参见: https://www.jianshu.com/p/333ed5ee958d
 
 
