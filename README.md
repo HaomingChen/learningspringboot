@@ -28,4 +28,13 @@ This is my personal project to study springboot
 10.HttpMessageConverter: 将Http的请求和响应(文本)解析成Json
 参见: https://www.jianshu.com/p/333ed5ee958d
 
+11.通过实现WebMvcConfigurer接口(疑问: 为什么实现类并不需要实现接口中所有的方法)
+2.0版本中WebMvcConfigurerAdapter被废弃（该方法实现了WebMvcConfigurer接口）。
+
+12.WebMvcConfigurerAdapter配合@EnableWebMvc在2.x版本失效。
+自定义配置类继承WebMvcConfigurationSupport类(@EnableWebMvc继承自该类)
+会使Springboot的Spring MVC默认配置失效相当于spring boot 1.x版本中WebMvcConfigurerAdapter
+配合@EnableWebMvc使用达到完全接管Spring MVC配置的目的。
+原因: 查看WebMvcAutoConfiguration signature -> @ConditionalOnMissingBean(WebMvcConfigurationSupport.class)
+
 
