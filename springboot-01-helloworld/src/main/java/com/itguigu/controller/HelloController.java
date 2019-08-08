@@ -18,6 +18,10 @@ import java.util.Map;
 @Component
 public class HelloController {
 
+//    @RequestMapping({"/","index.html"})
+//    public String index(){
+//        return "index";
+//    }
 
     String lastWonder;
 

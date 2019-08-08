@@ -37,4 +37,7 @@ This is my personal project to study springboot
 配合@EnableWebMvc使用达到完全接管Spring MVC配置的目的。
 原因: 查看WebMvcAutoConfiguration signature -> @ConditionalOnMissingBean(WebMvcConfigurationSupport.class)
 
+13.MessageCodeResolver不了解 与JSR303中@Blank中message定义的错误有关
+
+14.default setting为idea中全局默认设置
 
