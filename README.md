@@ -41,3 +41,7 @@ This is my personal project to study springboot
 
 14.default setting为idea中全局默认设置
 
+15.作用范围: Request < Session(默认30分钟,关闭浏览器失效) < servletContext
+SessionId由???(SessionId是由谁创建的?)在程序调用HttpServletRequest.getSession时创建,
+并在浏览器首次向服务器发送请求时在Response-header中返回以JSESSIONID为标识的sessionId
+sessionId将被缓存与浏览器中,在下次浏览器发出Request时带上以便于服务器验证用户的身份

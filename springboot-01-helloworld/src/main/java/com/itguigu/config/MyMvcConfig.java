@@ -1,13 +1,11 @@
 package com.itguigu.config;
 
+import com.itguigu.component.LoginHandlerInterceptor;
 import com.itguigu.component.MyLocaleResolver;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.*;
 
 //@EnableWebMvc
 @Configuration
@@ -27,6 +25,16 @@ public class MyMvcConfig implements WebMvcConfigurer {
             public void addViewControllers(ViewControllerRegistry registry) {
                 registry.addViewController("/").setViewName("login");
                 registry.addViewController("/index.html").setViewName("login");
+                registry.addViewController("/main.html").setViewName("dashboard");
+            }
+
+            //注册拦截器
+            @Override
+            public void addInterceptors(InterceptorRegistry registry) {
+                //静态资源; *.css, *.js
+                //springboot已经做好了静态资源的映射,不需要放行
+                registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**").
+                        excludePathPatterns("/index.html","/","/user/login");
             }
         };
         return configurer;
