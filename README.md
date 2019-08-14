@@ -45,3 +45,11 @@ This is my personal project to study springboot
 SessionId由???(SessionId是由谁创建的?)在程序调用HttpServletRequest.getSession时创建,
 并在浏览器首次向服务器发送请求时在Response-header中返回以JSESSIONID为标识的sessionId
 sessionId将被缓存与浏览器中,在下次浏览器发出Request时带上以便于服务器验证用户的身份
+
+16.restful CRUD和普通CRUD的区别, restful CRUD以不同的http请求方式代替了以URI来表示请求资源的方式
+以URI定位资源,以HTTP描述操作
+例如: 普通CRUD查询 uri: getEmp, RestfulCRUD: emp---GET,从而简化URI
+
+17.restful风格API对应的数据库操作
+GET（SELECT）：从服务器取出资源（一项或多项),POST（CREATE）：在服务器新建一个资源。
+PUT（UPDATE）：在服务器更新资源（客户端提供改变后的完整资源）。DELETE（DELETE）：从服务器删除资源。
