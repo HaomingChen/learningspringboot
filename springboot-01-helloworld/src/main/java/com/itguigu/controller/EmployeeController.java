@@ -65,6 +65,9 @@ public class EmployeeController {
     public String toEditPage(@PathVariable("id") Integer id, Model model){
         Employee employee = employeeDao.get(id);
         model.addAttribute("emp", employee);
+        //页面要显示所有的部门列表
+        Collection<Department> departments = departmentDao.getDepartments();
+        model.addAttribute("depts",departments);
         //回到修改页面(add是一个修改添加二合一的页面 )
         return "emp/add";
     }
