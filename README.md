@@ -65,3 +65,6 @@ PUT（UPDATE）：在服务器更新资源（客户端提供改变后的完整�
 map.put("message", "用户出错了");存入message等数据,因为这些数据将会在DefaultErrorAttributes
 中被取出,例如: error.getMessage()
 4. 通过继承DefaultErrorAttribute可以增加输出的error字段通过在该方法返回的map中添加字段
+
+20.嵌入式servlet容器(tomcat):项目直接执行
+非嵌入式tomcat:项目打成war包,在外部tomcat中执行
