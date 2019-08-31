@@ -55,3 +55,13 @@ GET（SELECT）：从服务器取出资源（一项或多项),POST（CREATE）�
 PUT（UPDATE）：在服务器更新资源（客户端提供改变后的完整资源）。DELETE（DELETE）：从服务器删除资源。
 
 18.日期格式化器配置修改 没找到日期格式化器在哪
+
+19.自定义错误: 
+自定义错误处理页面的自动配置类为ErrorMvcAutoConfiguration
+1. 通过继承各类Exception来自定义异常
+2. 在Controller中抛出自定义异常
+3. 利用Controller和ExceptionHandler注解自定义ExceptionHandler转发至/error,利用springboot自动
+配置的BasicErrorController来处理异常同时设定map.put("code", "user.notexist"),
+map.put("message", "用户出错了");存入message等数据,因为这些数据将会在DefaultErrorAttributes
+中被取出,例如: error.getMessage()
+4. 通过继承DefaultErrorAttribute可以增加输出的error字段通过在该方法返回的map中添加字段

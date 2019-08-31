@@ -1,8 +1,10 @@
 package com.itguigu.controller;
 
+import com.itguigu.exception.UserNotExistException;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -37,7 +39,10 @@ public class HelloController {
 
     @RequestMapping("/hello")
     @ResponseBody
-    public String hello() {
+    public String hello(@RequestParam("user") String user) {
+        if(user.equals("aaa")){
+            throw new UserNotExistException();
+        }
         return "Hello World " + lastWonder;
     }
 
